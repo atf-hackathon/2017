@@ -1,6 +1,7 @@
 <?php
 namespace AppBundle\Service;
 
+use AppBundle\Entity\Box;
 use Doctrine\ORM\EntityManager;
 
 /**
@@ -25,7 +26,7 @@ class BoxService
      * @return \AppBundle\Repository\BoxRepository|\Doctrine\ORM\EntityRepository
      */
     public function getRepository() {
-        return $this->manager->getRepository(\AppBundle\Entity\Box::class);
+        return $this->manager->getRepository(Box::class);
     }
 
     /**
