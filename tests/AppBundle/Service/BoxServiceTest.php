@@ -5,7 +5,7 @@ namespace Tests\AppBundle\Service;
 use AppBundle\Entity\Box;
 use AppBundle\Repository\BoxRepository;
 use AppBundle\Service\BoxService;
-use Doctrine\ORM\EntityManager;
+use Doctrine\Common\Persistence\ObjectManager;
 use PHPUnit\Framework\TestCase;
 
 class BoxServiceTest extends TestCase
@@ -22,8 +22,8 @@ class BoxServiceTest extends TestCase
             ->with(['active' => true])
             ->willReturn($activeBoxes);
 
-        /** @var EntityManager|\PHPUnit_Framework_MockObject_MockObject $entityManagerMock */
-        $entityManagerMock = $this->getMockBuilder(EntityManager::class)
+        /** @var ObjectManager|\PHPUnit_Framework_MockObject_MockObject $entityManagerMock */
+        $entityManagerMock = $this->getMockBuilder(ObjectManager::class)
             ->disableOriginalConstructor()
             ->getMock();
         $entityManagerMock->expects($this->any())

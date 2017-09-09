@@ -2,7 +2,9 @@
 namespace AppBundle\Service;
 
 use AppBundle\Entity\Box;
-use Doctrine\ORM\EntityManager;
+use AppBundle\Repository\BoxRepository;
+use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\Common\Persistence\ObjectRepository;
 
 /**
  * Class BoxService
@@ -10,20 +12,20 @@ use Doctrine\ORM\EntityManager;
  */
 class BoxService
 {
-    /** @var EntityManager */
+    /** @var ObjectManager */
     protected $manager;
 
     /**
      * BoxService constructor.
-     * @param EntityManager $manager
+     * @param ObjectManager $manager
      */
-    public function __construct(EntityManager $manager)
+    public function __construct(ObjectManager $manager)
     {
         $this->manager = $manager;
     }
 
     /**
-     * @return \AppBundle\Repository\BoxRepository|\Doctrine\ORM\EntityRepository
+     * @return BoxRepository|ObjectRepository
      */
     public function getRepository() {
         return $this->manager->getRepository(Box::class);
