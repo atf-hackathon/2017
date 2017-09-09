@@ -4,62 +4,62 @@
     <table class="table">
         <tbody>
         <tr>
-            <td class="success">{{ boxes[0].id }}</td>
-            <td class="warning" rowspan="4">{{ boxes[12].id }}</td>
-            <td class="success" rowspan="4">{{ boxes[15].id }}</td>
+            <td class="{% if boxes[0].availability %}success{% else %}danger{% endif %}">{{ boxes[0].id }}</td>
+            <td class="{% if boxes[0].availability %}success{% else %}danger{% endif %}" rowspan="4">{{ boxes[12].id }}</td>
+            <td class="{% if boxes[0].availability %}success{% else %}danger{% endif %}" rowspan="4">{{ boxes[15].id }}</td>
             <td rowspan="6">{{ boxes[18].id }}</td>
-            <td class="success">{{ boxes[20].id }}</td>
+            <td class="{% if boxes[0].availability %}success{% else %}danger{% endif %}">{{ boxes[20].id }}</td>
         </tr>
         <tr>
-            <td class="success">{{ boxes[1].id }}</td>
-            <td class="success">{{ boxes[21].id }}</td>
+            <td class="{% if boxes[0].availability %}success{% else %}danger{% endif %}">{{ boxes[1].id }}</td>
+            <td class="{% if boxes[0].availability %}success{% else %}danger{% endif %}">{{ boxes[21].id }}</td>
         </tr>
         <tr>
-            <td class="success">{{ boxes[2].id }}</td>
-            <td class="success">{{ boxes[22].id }}</td>
+            <td class="{% if boxes[0].availability %}success{% else %}danger{% endif %}">{{ boxes[2].id }}</td>
+            <td class="{% if boxes[0].availability %}success{% else %}danger{% endif %}">{{ boxes[22].id }}</td>
         </tr>
         <tr>
-            <td class="success">{{ boxes[3].id }}</td>
-            <td class="warning">{{ boxes[23].id }}</td>
-        </tr>
-
-        <tr>
-            <td class="success">{{ boxes[4].id }}</td>
-            <td class="warning" rowspan="4">{{ boxes[13].id }}</td>
-            <td class="info" rowspan="4">{{ boxes[16].id }}</td>
-            <td class="success">{{ boxes[24].id }}</td>
-        </tr>
-        <tr>
-            <td class="success">{{ boxes[5].id }}</td>
-            <td class="success">{{ boxes[25].id }}</td>
-        </tr>
-        <tr>
-            <td class="success">{{ boxes[6].id }}</td>
-            <td class="warning" rowspan="6">{{ boxes[19].id }}</td>
-            <td class="danger">{{ boxes[26].id }}</td>
-        </tr>
-        <tr>
-            <td class="success">{{ boxes[7].id }}</td>
-            <td class="success">{{ boxes[27].id }}</td>
+            <td class="{% if boxes[0].availability %}success{% else %}danger{% endif %}">{{ boxes[3].id }}</td>
+            <td class="{% if boxes[0].availability %}success{% else %}danger{% endif %}">{{ boxes[23].id }}</td>
         </tr>
 
         <tr>
-            <td class="success">{{ boxes[8].id }}</td>
-            <td class="warning" rowspan="4">{{ boxes[14].id }}</td>
-            <td class="danger" rowspan="4">{{ boxes[17].id }}</td>
-            <td class="success">{{ boxes[28].id }}</td>
+            <td class="{% if boxes[0].availability %}success{% else %}danger{% endif %}">{{ boxes[4].id }}</td>
+            <td class="{% if boxes[0].availability %}success{% else %}danger{% endif %}" rowspan="4">{{ boxes[13].id }}</td>
+            <td class="{% if boxes[0].availability %}success{% else %}danger{% endif %}" rowspan="4">{{ boxes[16].id }}</td>
+            <td class="{% if boxes[0].availability %}success{% else %}danger{% endif %}">{{ boxes[24].id }}</td>
         </tr>
         <tr>
-            <td class="success">{{ boxes[9].id }}</td>
-            <td class="warning">{{ boxes[29].id }}</td>
+            <td class="{% if boxes[0].availability %}success{% else %}danger{% endif %}">{{ boxes[5].id }}</td>
+            <td class="{% if boxes[0].availability %}success{% else %}danger{% endif %}">{{ boxes[25].id }}</td>
         </tr>
         <tr>
-            <td class="success">{{ boxes[10].id }}</td>
-            <td class="info">{{ boxes[30].id }}</td>
+            <td class="{% if boxes[0].availability %}success{% else %}danger{% endif %}">{{ boxes[6].id }}</td>
+            <td class="{% if boxes[0].availability %}success{% else %}danger{% endif %}" rowspan="6">{{ boxes[19].id }}</td>
+            <td class="{% if boxes[0].availability %}success{% else %}danger{% endif %}">{{ boxes[26].id }}</td>
         </tr>
         <tr>
-            <td class="success">{{ boxes[11].id }}</td>
-            <td class="danger">{{ boxes[31].id }}</td>
+            <td class="{% if boxes[0].availability %}success{% else %}danger{% endif %}">{{ boxes[7].id }}</td>
+            <td class="{% if boxes[0].availability %}success{% else %}danger{% endif %}">{{ boxes[27].id }}</td>
+        </tr>
+
+        <tr>
+            <td class="{% if boxes[0].availability %}success{% else %}danger{% endif %}">{{ boxes[8].id }}</td>
+            <td class="{% if boxes[0].availability %}success{% else %}danger{% endif %}" rowspan="4">{{ boxes[14].id }}</td>
+            <td class="{% if boxes[0].availability %}success{% else %}danger{% endif %}" rowspan="4">{{ boxes[17].id }}</td>
+            <td class="{% if boxes[0].availability %}success{% else %}danger{% endif %}">{{ boxes[28].id }}</td>
+        </tr>
+        <tr>
+            <td class="{% if boxes[0].availability %}success{% else %}danger{% endif %}">{{ boxes[9].id }}</td>
+            <td class="{% if boxes[0].availability %}success{% else %}danger{% endif %}">{{ boxes[29].id }}</td>
+        </tr>
+        <tr>
+            <td class="{% if boxes[0].availability %}success{% else %}danger{% endif %}">{{ boxes[10].id }}</td>
+            <td class="{% if boxes[0].availability %}success{% else %}danger{% endif %}">{{ boxes[30].id }}</td>
+        </tr>
+        <tr>
+            <td class="{% if boxes[0].availability %}success{% else %}danger{% endif %}">{{ boxes[11].id }}</td>
+            <td class="{% if boxes[0].availability %}success{% else %}danger{% endif %}">{{ boxes[31].id }}</td>
         </tr>
         </tbody>
     </table>
