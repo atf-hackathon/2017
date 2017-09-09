@@ -16,4 +16,6 @@
 /vendor/
 /web/bundles/
 /node_modules/
-.idea
+/bin/
+!/bin/console
+.idea/
