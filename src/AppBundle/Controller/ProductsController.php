@@ -2,6 +2,8 @@
 
 namespace AppBundle\Controller;
 
+use AppBundle\Entity\Product;
+use AppBundle\Entity\ProductOrder;
 use AppBundle\Service\ProductService;
 use AppBundle\Service\ProductOrdersService;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -20,24 +22,37 @@ class ProductsController extends Controller
      */
     public function indexAction(Request $request, ProductService $productService)
     {
-//        var_dump($productService->getRepository()->findAll()); die;
-        return new JsonResponse(['data' => [[
-                'id' => 1,
-                'name' => 'Product 1'
-            ], [
-                'id' => 2,
-                'name' => 'Product 2'
-            ]]
-        ]);
+        $response = [];
+        /** @var Product $product */
+        foreach ($productService->getRepository()->findAll() as $product) {
+            $response[] = [
+                'id' => $product->getId(),
+                'name' => $product->getName()
+            ];
+        }
+
+        return new JsonResponse([ 'data' => $response ]);
     }
 
     /**
-     * @Route("/orders", name="orders-listing")
+     * @Route("/orders", name="product-orders-listing")
      *
      * @param Request $request
      * @param ProductOrdersService $ordersService
+     * @return JsonResponse
      */
     public function orderedAction(Request $request, ProductOrdersService $ordersService) {
-        var_dump($ordersService->getRepository()->findAll()); die;
+        $response = [];
+        /** @var ProductOrder $productOrder */
+        foreach ($ordersService->getRepository()->findAll() as $productOrder) {
+            $response[] = [
+                'id' => $productOrder->getId(),
+                'product_id' => $productOrder->getProduct()->getId(),
+                'product' => $productOrder->getProduct()->getName(),
+                'box' => $productOrder->getBox()->getId()
+            ];
+        }
+
+        return new JsonResponse([ 'data' => $response ]);
     }
 }
