@@ -1,14 +1,12 @@
 <?php
+
 namespace AppBundle\Service;
 
-use AppBundle\Entity\Box;
+
+use AppBundle\Entity\Product;
 use Doctrine\ORM\EntityManager;
 
-/**
- * Class BoxService
- * @package AppBundle\Service
- */
-class BoxService
+class ProductService
 {
     /** @var EntityManager */
     protected $manager;
@@ -26,14 +24,6 @@ class BoxService
      * @return \Doctrine\ORM\EntityRepository
      */
     public function getRepository() {
-        return $this->manager->getRepository(Box::class);
-    }
-
-    /**
-     * @return array
-     */
-    public function getBoxes()
-    {
-        return $this->getRepository()->findBy(['active' => 1]);
+        return $this->manager->getRepository(Product::class);
     }
 }
