@@ -4,62 +4,62 @@
     <table class="table">
         <tbody>
         <tr>
-            <td class="{% if boxes[0].availability %}success{% else %}danger{% endif %}">{{ boxes[0].id }}</td>
-            <td class="{% if boxes[12].availability %}success{% else %}danger{% endif %}" rowspan="4">{{ boxes[12].id }}</td>
-            <td class="{% if boxes[15].availability %}success{% else %}danger{% endif %}" rowspan="4">{{ boxes[15].id }}</td>
-            <td class="{% if boxes[18].availability %}success{% else %}danger{% endif %}" rowspan="6">{{ boxes[18].id }}</td>
-            <td class="{% if boxes[20].availability %}success{% else %}danger{% endif %}">{{ boxes[20].id }}</td>
+            <td class="{% if boxes[0].availability %}success{% else %}danger{% endif %}"><strong>{{ boxes[0].id }}</strong><br>{% if (boxes[0].availability) %}Free{% else %}Since {{ boxes[0].availabilityDate|date("F jS, g:ia") }}{% endif %}</td>
+            <td class="{% if boxes[12].availability %}success{% else %}danger{% endif %}" rowspan="4"><strong>{{ boxes[12].id }}</strong><br>{% if (boxes[12].availability) %}Free{% else %}Since {{ boxes[12].availabilityDate|date("F jS, g:ia") }}{% endif %}</td>
+            <td class="{% if boxes[15].availability %}success{% else %}danger{% endif %}" rowspan="4"><strong>{{ boxes[15].id }}</strong><br>{% if (boxes[15].availability) %}Free{% else %}Since {{ boxes[15].availabilityDate|date("F jS, g:ia") }}{% endif %}</td>
+            <td class="{% if boxes[18].availability %}success{% else %}danger{% endif %}" rowspan="6"><strong>{{ boxes[18].id }}</strong><br>{% if (boxes[18].availability) %}Free{% else %}Since {{ boxes[18].availabilityDate|date("F jS, g:ia") }}{% endif %}</td>
+            <td class="{% if boxes[20].availability %}success{% else %}danger{% endif %}"><strong>{{ boxes[20].id }}</strong><br>{% if (boxes[20].availability) %}Free{% else %}Since {{ boxes[20].availabilityDate|date("F jS, g:ia") }}{% endif %}</td>
         </tr>
         <tr>
-            <td class="{% if boxes[1].availability %}success{% else %}danger{% endif %}">{{ boxes[1].id }}</td>
-            <td class="{% if boxes[21].availability %}success{% else %}danger{% endif %}">{{ boxes[21].id }}</td>
+            <td class="{% if boxes[1].availability %}success{% else %}danger{% endif %}"><strong>{{ boxes[1].id }}</strong><br>{% if (boxes[1].availability) %}Free{% else %}Since {{ boxes[1].availabilityDate|date("F jS, g:ia") }}{% endif %}</td>
+            <td class="{% if boxes[21].availability %}success{% else %}danger{% endif %}"><strong>{{ boxes[21].id }}</strong><br>{% if (boxes[21].availability) %}Free{% else %}Since {{ boxes[21].availabilityDate|date("F jS, g:ia") }}{% endif %}</td>
         </tr>
         <tr>
-            <td class="{% if boxes[2].availability %}success{% else %}danger{% endif %}">{{ boxes[2].id }}</td>
-            <td class="{% if boxes[22].availability %}success{% else %}danger{% endif %}">{{ boxes[22].id }}</td>
+            <td class="{% if boxes[2].availability %}success{% else %}danger{% endif %}"><strong>{{ boxes[2].id }}</strong><br>{% if (boxes[2].availability) %}Free{% else %}Since {{ boxes[2].availabilityDate|date("F jS, g:ia") }}{% endif %}</td>
+            <td class="{% if boxes[22].availability %}success{% else %}danger{% endif %}"><strong>{{ boxes[22].id }}</strong><br>{% if (boxes[22].availability) %}Free{% else %}Since {{ boxes[22].availabilityDate|date("F jS, g:ia") }}{% endif %}</td>
         </tr>
         <tr>
-            <td class="{% if boxes[3].availability %}success{% else %}danger{% endif %}">{{ boxes[3].id }}</td>
-            <td class="{% if boxes[23].availability %}success{% else %}danger{% endif %}">{{ boxes[23].id }}</td>
-        </tr>
-
-        <tr>
-            <td class="{% if boxes[4].availability %}success{% else %}danger{% endif %}">{{ boxes[4].id }}</td>
-            <td class="{% if boxes[13].availability %}success{% else %}danger{% endif %}" rowspan="4">{{ boxes[13].id }}</td>
-            <td class="{% if boxes[16].availability %}success{% else %}danger{% endif %}" rowspan="4">{{ boxes[16].id }}</td>
-            <td class="{% if boxes[24].availability %}success{% else %}danger{% endif %}">{{ boxes[24].id }}</td>
-        </tr>
-        <tr>
-            <td class="{% if boxes[5].availability %}success{% else %}danger{% endif %}">{{ boxes[5].id }}</td>
-            <td class="{% if boxes[25].availability %}success{% else %}danger{% endif %}">{{ boxes[25].id }}</td>
-        </tr>
-        <tr>
-            <td class="{% if boxes[6].availability %}success{% else %}danger{% endif %}">{{ boxes[6].id }}</td>
-            <td class="{% if boxes[19].availability %}success{% else %}danger{% endif %}" rowspan="6">{{ boxes[19].id }}</td>
-            <td class="{% if boxes[26].availability %}success{% else %}danger{% endif %}">{{ boxes[26].id }}</td>
-        </tr>
-        <tr>
-            <td class="{% if boxes[7].availability %}success{% else %}danger{% endif %}">{{ boxes[7].id }}</td>
-            <td class="{% if boxes[27].availability %}success{% else %}danger{% endif %}">{{ boxes[27].id }}</td>
+            <td class="{% if boxes[3].availability %}success{% else %}danger{% endif %}"><strong>{{ boxes[3].id }}</strong><br>{% if (boxes[3].availability) %}Free{% else %}Since {{ boxes[3].availabilityDate|date("F jS, g:ia") }}{% endif %}</td>
+            <td class="{% if boxes[23].availability %}success{% else %}danger{% endif %}"><strong>{{ boxes[23].id }}</strong><br>{% if (boxes[23].availability) %}Free{% else %}Since {{ boxes[23].availabilityDate|date("F jS, g:ia") }}{% endif %}</td>
         </tr>
 
         <tr>
-            <td class="{% if boxes[8].availability %}success{% else %}danger{% endif %}">{{ boxes[8].id }}</td>
-            <td class="{% if boxes[14].availability %}success{% else %}danger{% endif %}" rowspan="4">{{ boxes[14].id }}</td>
-            <td class="{% if boxes[17].availability %}success{% else %}danger{% endif %}" rowspan="4">{{ boxes[17].id }}</td>
-            <td class="{% if boxes[28].availability %}success{% else %}danger{% endif %}">{{ boxes[28].id }}</td>
+            <td class="{% if boxes[4].availability %}success{% else %}danger{% endif %}"><strong>{{ boxes[4].id }}</strong><br>{% if (boxes[4].availability) %}Free{% else %}Since {{ boxes[4].availabilityDate|date("F jS, g:ia") }}{% endif %}</td>
+            <td class="{% if boxes[13].availability %}success{% else %}danger{% endif %}" rowspan="4"><strong>{{ boxes[13].id }}</strong><br>{% if (boxes[13].availability) %}Free{% else %}Since {{ boxes[13].availabilityDate|date("F jS, g:ia") }}{% endif %}</td>
+            <td class="{% if boxes[16].availability %}success{% else %}danger{% endif %}" rowspan="4"><strong>{{ boxes[16].id }}</strong><br>{% if (boxes[16].availability) %}Free{% else %}Since {{ boxes[16].availabilityDate|date("F jS, g:ia") }}{% endif %}</td>
+            <td class="{% if boxes[24].availability %}success{% else %}danger{% endif %}"><strong>{{ boxes[24].id }}</strong><br>{% if (boxes[24].availability) %}Free{% else %}Since {{ boxes[24].availabilityDate|date("F jS, g:ia") }}{% endif %}</td>
         </tr>
         <tr>
-            <td class="{% if boxes[9].availability %}success{% else %}danger{% endif %}">{{ boxes[9].id }}</td>
-            <td class="{% if boxes[29].availability %}success{% else %}danger{% endif %}">{{ boxes[29].id }}</td>
+            <td class="{% if boxes[5].availability %}success{% else %}danger{% endif %}"><strong>{{ boxes[5].id }}</strong><br>{% if (boxes[5].availability) %}Free{% else %}Since {{ boxes[5].availabilityDate|date("F jS, g:ia") }}{% endif %}</td>
+            <td class="{% if boxes[25].availability %}success{% else %}danger{% endif %}"><strong>{{ boxes[25].id }}</strong><br>{% if (boxes[25].availability) %}Free{% else %}Since {{ boxes[25].availabilityDate|date("F jS, g:ia") }}{% endif %}</td>
         </tr>
         <tr>
-            <td class="{% if boxes[10].availability %}success{% else %}danger{% endif %}">{{ boxes[10].id }}</td>
-            <td class="{% if boxes[30].availability %}success{% else %}danger{% endif %}">{{ boxes[30].id }}</td>
+            <td class="{% if boxes[6].availability %}success{% else %}danger{% endif %}"><strong>{{ boxes[6].id }}</strong><br>{% if (boxes[6].availability) %}Free{% else %}Since {{ boxes[6].availabilityDate|date("F jS, g:ia") }}{% endif %}</td>
+            <td class="{% if boxes[19].availability %}success{% else %}danger{% endif %}" rowspan="6"><strong>{{ boxes[19].id }}</strong><br>{% if (boxes[19].availability) %}Free{% else %}Since {{ boxes[19].availabilityDate|date("F jS, g:ia") }}{% endif %}</td>
+            <td class="{% if boxes[26].availability %}success{% else %}danger{% endif %}"><strong>{{ boxes[26].id }}</strong><br>{% if (boxes[26].availability) %}Free{% else %}Since {{ boxes[26].availabilityDate|date("F jS, g:ia") }}{% endif %}</td>
         </tr>
         <tr>
-            <td class="{% if boxes[11].availability %}success{% else %}danger{% endif %}">{{ boxes[11].id }}</td>
-            <td class="{% if boxes[31].availability %}success{% else %}danger{% endif %}">{{ boxes[31].id }}</td>
+            <td class="{% if boxes[7].availability %}success{% else %}danger{% endif %}"><strong>{{ boxes[7].id }}</strong><br>{% if (boxes[7].availability) %}Free{% else %}Since {{ boxes[7].availabilityDate|date("F jS, g:ia") }}{% endif %}</td>
+            <td class="{% if boxes[27].availability %}success{% else %}danger{% endif %}"><strong>{{ boxes[27].id }}</strong><br>{% if (boxes[27].availability) %}Free{% else %}Since {{ boxes[27].availabilityDate|date("F jS, g:ia") }}{% endif %}</td>
+        </tr>
+
+        <tr>
+            <td class="{% if boxes[8].availability %}success{% else %}danger{% endif %}"><strong>{{ boxes[8].id }}</strong><br>{% if (boxes[8].availability) %}Free{% else %}Since {{ boxes[8].availabilityDate|date("F jS, g:ia") }}{% endif %}</td>
+            <td class="{% if boxes[14].availability %}success{% else %}danger{% endif %}" rowspan="4"><strong>{{ boxes[14].id }}</strong><br>{% if (boxes[14].availability) %}Free{% else %}Since {{ boxes[14].availabilityDate|date("F jS, g:ia") }}{% endif %}</td>
+            <td class="{% if boxes[17].availability %}success{% else %}danger{% endif %}" rowspan="4"><strong>{{ boxes[17].id }}</strong><br>{% if (boxes[17].availability) %}Free{% else %}Since {{ boxes[17].availabilityDate|date("F jS, g:ia") }}{% endif %}</td>
+            <td class="{% if boxes[28].availability %}success{% else %}danger{% endif %}"><strong>{{ boxes[28].id }}</strong><br>{% if (boxes[28].availability) %}Free{% else %}Since {{ boxes[28].availabilityDate|date("F jS, g:ia") }}{% endif %}</td>
+        </tr>
+        <tr>
+            <td class="{% if boxes[9].availability %}success{% else %}danger{% endif %}"><strong>{{ boxes[9].id }}</strong><br>{% if (boxes[9].availability) %}Free{% else %}Since {{ boxes[9].availabilityDate|date("F jS, g:ia") }}{% endif %}</td>
+            <td class="{% if boxes[29].availability %}success{% else %}danger{% endif %}"><strong>{{ boxes[29].id }}</strong><br>{% if (boxes[29].availability) %}Free{% else %}Since {{ boxes[29].availabilityDate|date("F jS, g:ia") }}{% endif %}</td>
+        </tr>
+        <tr>
+            <td class="{% if boxes[10].availability %}success{% else %}danger{% endif %}"><strong>{{ boxes[10].id }}</strong><br>{% if (boxes[10].availability) %}Free{% else %}Since {{ boxes[10].availabilityDate|date("F jS, g:ia") }}{% endif %}</td>
+            <td class="{% if boxes[30].availability %}success{% else %}danger{% endif %}"><strong>{{ boxes[30].id }}</strong><br>{% if (boxes[30].availability) %}Free{% else %}Since {{ boxes[30].availabilityDate|date("F jS, g:ia") }}{% endif %}</td>
+        </tr>
+        <tr>
+            <td class="{% if boxes[11].availability %}success{% else %}danger{% endif %}"><strong>{{ boxes[11].id }}</strong><br>{% if (boxes[11].availability) %}Free{% else %}Since {{ boxes[11].availabilityDate|date("F jS, g:ia") }}{% endif %}</td>
+            <td class="{% if boxes[31].availability %}success{% else %}danger{% endif %}"><strong>{{ boxes[31].id }}</strong><br>{% if (boxes[31].availability) %}Free{% else %}Since {{ boxes[31].availabilityDate|date("F jS, g:ia") }}{% endif %}</td>
         </tr>
         </tbody>
     </table>
