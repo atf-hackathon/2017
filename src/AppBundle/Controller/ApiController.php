@@ -12,7 +12,7 @@ class ApiController extends Controller
      * @Route("/api/check_availability", name="check-availability")
      *
      */
-    public function checkAction() {
-
+    public function checkAction()
+    {
     }
 }
