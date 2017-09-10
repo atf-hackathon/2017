@@ -50,11 +50,29 @@ class Box
     private $active = true;
 
     /**
-     * @var Box
+     * @var ProductOrder
      *
      * @ORM\OneToMany(targetEntity="ProductOrder", mappedBy="box")
      */
     private $productOrder;
+
+    /**
+     * @return ProductOrder
+     */
+    public function getProductOrder()
+    {
+        return $this->productOrder;
+    }
+
+    /**
+     * @param ProductOrder $productOrder
+     * @return $this
+     */
+    public function setProductOrder($productOrder)
+    {
+        $this->productOrder = $productOrder;
+        return $this;
+    }
 
     /**
      * @return int
