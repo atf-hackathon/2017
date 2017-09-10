@@ -45,7 +45,7 @@
                     '<div class="delivery-estimate-box pad-sep-xs">'+
                         '<i class="delivery-estimate-icon em em-open"></i>'+
                         '<div>'+
-                            '<div>eBox instant</div><span class="text-success delivery-estimate-text-sm">livrare automata instantanee</span>'+
+                            '<div>Self service eBox</div><span class="text-success delivery-estimate-text-sm">livrare si ridicare automata</span>'+
                         '</div>'+
                     '</div>'+
                 '</div>'

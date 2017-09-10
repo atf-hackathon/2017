@@ -18,8 +18,7 @@ class BoxServiceTest extends TestCase
             ->disableOriginalConstructor()
             ->getMock();
         $repositoryMock->expects($this->any())
-            ->method('findBy')
-            ->with(['active' => true])
+            ->method('getAll')
             ->willReturn($activeBoxes);
 
         /** @var ObjectManager|\PHPUnit_Framework_MockObject_MockObject $entityManagerMock */
