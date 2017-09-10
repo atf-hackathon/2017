@@ -31,7 +31,7 @@ class ProductOrder
     /**
      * @var Product
      *
-     * @ORM\ManyToOne(targetEntity="Product", inversedBy="products")
+     * @ORM\ManyToOne(targetEntity="Product")
      * @ORM\JoinColumn(name="product_id", referencedColumnName="id")
      */
     private $product;
@@ -39,7 +39,7 @@ class ProductOrder
     /**
      * @var Box
      *
-     * @ORM\ManyToOne(targetEntity="Box", inversedBy="boxes")
+     * @ORM\ManyToOne(targetEntity="Box")
      * @ORM\JoinColumn(name="box_id", referencedColumnName="id")
      */
     private $box;
