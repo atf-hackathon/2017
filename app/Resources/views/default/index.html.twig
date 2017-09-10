@@ -1,19 +1,15 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <table style="width: 100%;">
-        <tr>
-            <td>
+
+    <div id="container">
+        <header></header>
+        <main id="content">
+            <div id="left-pane">
                 <table id="orders-list" class="table">
-                    <thead>
-                    <tr>
-                        <th>Id</th>
-                        <th>Name</th>
-                    </tr>
-                    </thead>
                 </table>
-            </td>
-            <td>
+            </div>
+            <div id="center-pane">
                 <table id="boxes-list" class="table">
                     <tbody>
                     <tr>
@@ -76,16 +72,17 @@
                     </tr>
                     </tbody>
                 </table>
-            </td>
-        </tr>
-    </table>
+            </div>
+        </main>
+        <footer></footer>
+    </div>
 {% endblock %}
 
 {% block stylesheets %}
     <style>
-        #boxes-list, body, html{
-            height: 100%;
-        }
+        /*#boxes-list, body, html{*/
+            /*height: 100%;*/
+        /*}*/
     </style>
 
     <link rel="stylesheet" href="{{ asset('build/global.css') }}">

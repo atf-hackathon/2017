@@ -2,6 +2,8 @@
 
 namespace AppBundle\Repository;
 
+use Doctrine\ORM\Query\Expr\Join;
+
 /**
  * ProductOrderRepository
  *
@@ -10,4 +12,25 @@ namespace AppBundle\Repository;
  */
 class ProductOrderRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function getAll($filters = []) {
+        $qb = $this->createQueryBuilder('por')
+            ->select([
+                'por.id',
+                'por.orderId',
+                'por.orderStatus',
+                'p.id as product_id',
+                'p.name',
+                'b.id as box_id'
+            ])
+            ->leftJoin('por.product', 'p')
+            ->leftJoin('por.box', 'b');
+            ;
+
+        if (isset($filters['search'])) {
+            $qb->where('por.orderId LIKE :orderId')
+                ->setParameter('orderId', '%' . $filters['search']['value'] . '%');
+        }
+
+        return $qb->getQuery()->getResult();
+    }
 }

@@ -22,6 +22,13 @@ class ProductOrder
     private $id;
 
     /**
+     * @var string
+     *
+     * @ORM\Column(name="order_id", type="string")
+     */
+    private $orderId;
+
+    /**
      * @var Product
      *
      * @ORM\ManyToOne(targetEntity="Product", inversedBy="products")
@@ -36,6 +43,49 @@ class ProductOrder
      * @ORM\JoinColumn(name="box_id", referencedColumnName="id")
      */
     private $box;
+
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="order_status", type="boolean", options={"default" = 0})
+     */
+    private $orderStatus;
+
+    /**
+     * @return string
+     */
+    public function getOrderId()
+    {
+        return $this->orderId;
+    }
+
+    /**
+     * @param string $orderId
+     * @return $this
+     */
+    public function setOrderId($orderId)
+    {
+        $this->orderId = $orderId;
+        return $this;
+    }
+
+    /**
+     * @return bool
+     */
+    public function isOrderStatus()
+    {
+        return $this->orderStatus;
+    }
+
+    /**
+     * @param bool $orderStatus
+     * @return $this
+     */
+    public function setOrderStatus($orderStatus)
+    {
+        $this->orderStatus = $orderStatus;
+        return $this;
+    }
 
     /**
      * Get id

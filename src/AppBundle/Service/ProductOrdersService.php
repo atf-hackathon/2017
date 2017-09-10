@@ -26,4 +26,12 @@ class ProductOrdersService
     public function getRepository() {
         return $this->manager->getRepository(ProductOrder::class);
     }
+
+    /**
+     * @param array $filters
+     * @return array
+     */
+    public function findAll($filters = []) {
+        return $this->getRepository()->getAll($filters);
+    }
 }

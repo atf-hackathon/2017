@@ -1,2 +1,56 @@
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 @import '~datatables/media/css/jquery.dataTables.css';
+
+#container {
+  height: 100vh;
+  width: 100%;
+
+  > #content {
+    height: 100%;
+    display: flex;
+
+    > #left-pane {
+      height: 100%;
+      width: 300px;
+    }
+
+    > #center-pane {
+      height: 100%;
+      flex: 1
+    }
+  }
+}
+
+#boxes-list {
+  height: 100%;
+}
+
+.table {
+  width: 100%;
+  max-width: 100%;
+  margin-bottom: 0;
+}
+
+#orders-list_wrapper {
+  > .top {
+    width: 100%;
+
+    > #orders-list_filter {
+
+      > label {
+        display: block;
+      }
+      clear: both;
+      width: 100%;
+    }
+
+    input[type="search"] {
+      width: 100%;
+      border: none;
+      border-bottom: 1px solid #ddd;
+      margin-left: 0;
+      outline: none;
+      padding: 10px;
+    }
+  }
+}
