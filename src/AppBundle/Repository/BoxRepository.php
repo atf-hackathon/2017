@@ -17,9 +17,12 @@ class BoxRepository extends \Doctrine\ORM\EntityRepository
                 'por.orderId',
                 'b.id',
                 'b.availability',
-                'b.availabilityDate'
+                'b.availabilityDate',
+                'p.name as product'
             ])
-            ->leftJoin('b.productOrder', 'por');
+            ->leftJoin('b.productOrder', 'por')
+            ->leftJoin('por.product', 'p')
+            ->where("b.active = 1");
 
         return $qb->getQuery()->getResult();
     }

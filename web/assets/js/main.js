@@ -85,6 +85,19 @@ $(function() {
     $('#boxes-list').find('td')
         .off('click')
         .on('click', function() {
-            cancelWin.modal('show');
+            if ($(this).data('productorder')) {
+                cancelWin.modal('show');
+
+                cancelWin.find('.product').text($(this).data('product'));
+
+                cancelWin.find('form').find('input[name="id"]').val($(this).data('productorder'));
+                cancelWin.find('form').find('input[name="box_id"]').val($(this).data('boxid'));
+
+                cancelWin.find('.save')
+                    .off('click')
+                    .on('click', function() {
+                        cancelWin.find('form').submit();
+                    });
+            }
         })
 });

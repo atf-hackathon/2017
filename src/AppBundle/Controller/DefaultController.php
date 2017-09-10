@@ -16,8 +16,10 @@ class DefaultController extends Controller
     public function indexAction(Request $request, BoxService $boxService, ProductOrdersService $productOrdersService)
     {
         $params = $request->request->all();
-        if (count($params)) {
+        if (count($params) && !isset($params['cancel'])) {
             $productOrdersService->saveOrder($params);
+        } else if (count($params) && isset($params['cancel'])) {
+            $productOrdersService->removeOrder($params);
         }
         $boxes = $boxService->getBoxes();
 
