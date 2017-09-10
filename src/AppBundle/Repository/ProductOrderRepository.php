@@ -23,12 +23,27 @@ class ProductOrderRepository extends \Doctrine\ORM\EntityRepository
                 'b.id as box_id'
             ])
             ->leftJoin('por.product', 'p')
-            ->leftJoin('por.box', 'b');
-            ;
+            ->leftJoin('por.box', 'b')
+            ->where('1 = 1');
 
         if (isset($filters['search'])) {
-            $qb->where('por.orderId LIKE :orderId')
+            $qb->andWhere('por.orderId LIKE :orderId')
                 ->setParameter('orderId', '%' . $filters['search']['value'] . '%');
+        }
+
+        if (isset($filters['filterStatus'])) {
+            switch ($filters['filterStatus']) {
+                case 1: $qb->andWhere('por.orderStatus = 0');
+                    break;
+                case 2: $qb->andWhere('por.orderStatus = 1');
+
+                    break;
+                case 3: $qb->andWhere('b.availabilityDate < :twoDaysInterval')
+                    ->setParameter('twoDaysInterval', 'NOW() - INTERVAL 2 DAY');
+                    break;
+                default:
+                    break;
+            }
         }
 
         return $qb->getQuery()->getResult();

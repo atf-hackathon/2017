@@ -36,6 +36,7 @@ class BoxService
      */
     public function getBoxes()
     {
+        return $this->getRepository()->getAll();
         return $this->getRepository()->findBy(['active' => 1]);
     }
 }

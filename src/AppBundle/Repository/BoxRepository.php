@@ -10,4 +10,17 @@ namespace AppBundle\Repository;
  */
 class BoxRepository extends \Doctrine\ORM\EntityRepository
 {
+    public function getAll() {
+        $qb = $this->createQueryBuilder('b')
+            ->select([
+                'por.id as product_order_id',
+                'por.orderId',
+                'b.id',
+                'b.availability',
+                'b.availabilityDate'
+            ])
+            ->leftJoin('b.productOrder', 'por');
+
+        return $qb->getQuery()->getResult();
+    }
 }
