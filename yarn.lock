@@ -1093,6 +1093,10 @@ commondir@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/commondir/-/commondir-1.0.1.tgz#ddd800da0c66127393cca5950ea968a3aaf1253b"
 
+components-font-awesome@^4.6.3:
+  version "4.6.3"
+  resolved "https://registry.yarnpkg.com/components-font-awesome/-/components-font-awesome-4.6.3.tgz#52435b352a529e5781293641f00a3facf1f67e63"
+
 compressible@~2.0.10:
   version "2.0.11"
   resolved "https://registry.yarnpkg.com/compressible/-/compressible-2.0.11.tgz#16718a75de283ed8e604041625a2064586797d8a"

@@ -10,6 +10,8 @@ $(function() {
             {
                 title: "Order"
                 , render: function(data, type, row) {
+                    let productName = row.product.length > 36 ? row.product.substring(0, 36) + '...' : row.product;
+
                     return `
                         <div>
                             <div class="pull-left text-primary">${row.orderId}</div>
@@ -17,7 +19,7 @@ $(function() {
                             
                             <div class="clearfix"></div>
                             
-                            <div class="text-muted">${row.product}</div>
+                            <div class="text-muted order-product" title="${row.product}"><i class="fa fa-circle text-success" aria-hidden="true"></i> ${productName}</div>
                         </div>
                     `;
                 }

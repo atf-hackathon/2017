@@ -1,5 +1,6 @@
 @import '~bootstrap-sass/assets/stylesheets/bootstrap';
 @import '~datatables/media/css/jquery.dataTables.css';
+@import '~components-font-awesome/scss/font-awesome.scss';
 
 #container {
   height: 100vh;
@@ -29,6 +30,11 @@
   width: 100%;
   max-width: 100%;
   margin-bottom: 0;
+}
+
+.table > thead > tr > th, .table > thead > tr > td, .table > tbody > tr > th, .table > tbody > tr > td, .table > tfoot > tr > th, .table > tfoot > tr > td {
+  border-left: 1px solid #ddd;
+  border-color: #cccccc;
 }
 
 #orders-list_wrapper {
