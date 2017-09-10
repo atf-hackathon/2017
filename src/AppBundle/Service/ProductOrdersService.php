@@ -2,26 +2,26 @@
 
 namespace AppBundle\Service;
 
-
 use AppBundle\Entity\ProductOrder;
-use Doctrine\ORM\EntityManager;
+use Doctrine\Common\Persistence\ObjectManager;
+use Doctrine\Common\Persistence\ObjectRepository;
 
 class ProductOrdersService
 {
-    /** @var EntityManager */
+    /** @var ObjectManager */
     protected $manager;
 
     /**
      * BoxService constructor.
-     * @param EntityManager $manager
+     * @param ObjectManager $manager
      */
-    public function __construct(EntityManager $manager)
+    public function __construct(ObjectManager $manager)
     {
         $this->manager = $manager;
     }
 
     /**
-     * @return \Doctrine\ORM\EntityRepository
+     * @return ObjectRepository
      */
     public function getRepository() {
         return $this->manager->getRepository(ProductOrder::class);

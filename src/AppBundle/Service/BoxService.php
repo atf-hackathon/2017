@@ -6,10 +6,6 @@ use AppBundle\Repository\BoxRepository;
 use Doctrine\Common\Persistence\ObjectManager;
 use Doctrine\Common\Persistence\ObjectRepository;
 
-/**
- * Class BoxService
- * @package AppBundle\Service
- */
 class BoxService
 {
     /** @var ObjectManager */
