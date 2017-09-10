@@ -43,13 +43,16 @@ class ProductsController extends Controller
      */
     public function orderedAction(Request $request, ProductOrdersService $ordersService) {
         $response = [];
+        $filters = $request->query->all();
         /** @var ProductOrder $productOrder */
-        foreach ($ordersService->getRepository()->findAll() as $productOrder) {
+        foreach ($ordersService->findAll($filters) as $productOrder) {
             $response[] = [
-                'id' => $productOrder->getId(),
-                'product_id' => $productOrder->getProduct()->getId(),
-                'product' => $productOrder->getProduct()->getName(),
-                'box' => $productOrder->getBox()->getId()
+                'id' => $productOrder['id'],
+                'product_id' => $productOrder['product_id'],
+                'product' => $productOrder['name'],
+                'box' => $productOrder['box_id'],
+                'orderId' => $productOrder['orderId'],
+                'orderStatus' => $productOrder['orderStatus']
             ];
         }
 
