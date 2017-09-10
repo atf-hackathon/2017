@@ -32,15 +32,15 @@ class ProductOrder
      * @var Product
      *
      * @ORM\ManyToOne(targetEntity="Product")
-     * @ORM\JoinColumn(name="product_id", referencedColumnName="id")
+     * @ORM\JoinColumn(name="product_id", referencedColumnName="id", nullable=true)
      */
     private $product;
 
     /**
      * @var Box
      *
-     * @ORM\ManyToOne(targetEntity="Box")
-     * @ORM\JoinColumn(name="box_id", referencedColumnName="id")
+     * @ORM\ManyToOne(targetEntity="Box", inversedBy="productOrder")
+     * @ORM\JoinColumn(name="box_id", referencedColumnName="id", nullable=true)
      */
     private $box;
 

@@ -23,7 +23,7 @@ $(function() {
             {
                 title: "Order"
                 , render: function(data, type, row) {
-                    let productName = row.product.length > 36 ? row.product.substring(0, 36) + '...' : row.product
+                    let productName = row.product ? (row.product.length > 36 ? row.product.substring(0, 36) + '...' : row.product) : ''
                         , status = row.orderStatus ? 'text-danger' : 'text-success';
 
                     return `
