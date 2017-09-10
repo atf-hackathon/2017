@@ -62,4 +62,30 @@ class ProductOrdersService
 
         return true;
     }
+
+    /**
+     * @param $params
+     * @return bool
+     */
+    public function removeOrder($params) {
+        /** @var ProductOrder $order */
+        $order = $this->getRepository()->findOneBy([
+            'id' => $params['id']
+        ]);
+
+        $order->setOrderStatus(false);
+
+        $boxRepo = $this->manager->getRepository(Box::class);
+
+        /** @var Box $box */
+        $box = $boxRepo->findOneBy([
+            'id' => $params['box_id']
+        ]);
+        $box->setAvailability(true);
+        $box->setAvailabilityDate(new \DateTime());
+
+        $this->manager->flush();
+
+        return true;
+    }
 }
