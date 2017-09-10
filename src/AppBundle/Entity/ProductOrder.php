@@ -39,7 +39,7 @@ class ProductOrder
     /**
      * @var Box
      *
-     * @ORM\ManyToOne(targetEntity="Box")
+     * @ORM\ManyToOne(targetEntity="Box", inversedBy="productOrder")
      * @ORM\JoinColumn(name="box_id", referencedColumnName="id")
      */
     private $box;
