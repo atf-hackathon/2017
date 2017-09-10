@@ -21,8 +21,6 @@ class DefaultController extends Controller
         }
         $boxes = $boxService->getBoxes();
 
-        var_dump($boxes[4]); die;
-
         // replace this example code with whatever you need
         return $this->render('default/index.html.twig', [
             'boxes' => $boxes,
